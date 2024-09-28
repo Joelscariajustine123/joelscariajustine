@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 10px;
+      transition: color 0.3s ease;
+    }
+
+    /* Hover: Change color to yellow */
+    nav a:hover {
+      color: yellow;
+    }
+
+    /* On click: change color to red */
+    nav a.clicked {
+      color: red;
+    }
+
+    .social-links a {
+      margin-left: 20px;
+      color: #ffffff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      padding: 50px;
+    }
+
+    .hero-text {
+      flex: 1;
+      margin-right: 50px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .hero-image {
+      flex: 1;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .button {
+      background-color: #2ecc71;
+      color: #ffffff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="internship.html">Internship/Certificate</a></li>
+        <li><a href="contact.html">Contact Details</a></li>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/joel-scaria-justine-202191203" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Joelscariajustine123" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>JOEL SCARIA JUSTINE</h1>
+      <p>A Cybersecurity enthusiast and Python Full Stack Developer with a Bachelor's in Computer Science Engineering. I specialize in building secure, scalable web applications while exploring innovative solutions to safeguard digital systems. My passion lies in bridging the gap between development and cybersecurity, ensuring robust and efficient applications. Feel free to explore my work and reach out for collaborations or new opportunities. Let's create something secure and impactful together!</p>
+    </div>
+    <div class="hero-image">
+      <img src="profile.jpg" alt="Joel Scaria Justine">
+    </div>
+  </section>
+
+  <footer></footer>
+
+  <script>
+    // Add event listeners for all nav links
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        // Remove 'clicked' class from all links
+        document.querySelectorAll('nav a').forEach(navLink => {
+          navLink.classList.remove('clicked');
+        });
+
+        // Add 'clicked' class to the clicked link
+        this.classList.add('clicked');
+      });
+    });
+  </script>
+</body>
+</html>

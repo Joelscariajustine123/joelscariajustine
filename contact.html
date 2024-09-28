@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Contact Details</title>
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 10px;
+      transition: color 0.3s ease;
+    }
+
+    /* Hover: Change color to yellow */
+    nav a:hover {
+      color: yellow;
+    }
+
+    /* On click: change color to red */
+    nav a.clicked {
+      color: red;
+    }
+
+    .social-links a {
+      margin-left: 20px;
+      color: #ffffff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      padding: 50px;
+    }
+
+    .hero-text {
+      flex: 1;
+      margin-right: 50px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .contact-details {
+      font-size: 20px;
+      line-height: 1.8;
+    }
+
+    .hero-image {
+      flex: 1;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="internship.html">Internship/Certificate</a></li>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/joel-scaria-justine-202191203" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Joelscariajustine123" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Contact Details</h1>
+      <div class="contact-details">
+        <p><strong>Email:</strong> joelscaria2020@gmail.com, joelscaria391@gmail.com</p>
+        <p><strong>Mobile:</strong> 8156982391, 9188570391</p>
+        <p><strong>Address:</strong> Thulumpanmackel (H), Kuniyampuzha (PO), Chemperi, Kannur, Kerala 670632</p>
+        <p><strong>Date of Birth:</strong> 17/12/2002</p>
+        <p><strong>linkedin:</strong> www.linkedin.com/in/joel-scaria-justine-202191203</p>
+        <p><strong>Github:</strong> https://github.com/Joelscariajustine123</p>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="profile.jpg" alt="Joel Scaria Justine">
+    </div>
+  </section>
+
+  <footer></footer>
+
+  <script>
+    // Add event listeners for all nav links
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        // Remove 'clicked' class from all links
+        document.querySelectorAll('nav a').forEach(navLink => {
+          navLink.classList.remove('clicked');
+        });
+
+        // Add 'clicked' class to the clicked link
+        this.classList.add('clicked');
+      });
+    });
+  </script>
+</body>
+</html>

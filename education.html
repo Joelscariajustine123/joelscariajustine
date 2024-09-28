@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joel Scaria Justine - Portfolio</title>
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 10px;
+      transition: color 0.3s ease;
+    }
+
+    /* Hover: Change color to yellow */
+    nav a:hover {
+      color: yellow;
+    }
+
+    /* On click: change color to red */
+    nav a.clicked {
+      color: red;
+    }
+
+    .social-links a {
+      margin-left: 20px;
+      color: #ffffff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+
+    .hero-buttons {
+      margin-bottom: 20px;
+    }
+
+    .hero-buttons button {
+      background-color: #2ecc71;
+      color: #ffffff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      margin: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-buttons button:hover {
+      background-color: #27ae60;
+    }
+
+    .hero-content {
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .hero-content h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .education-image {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="internship.html">Internship/Certificate</a></li>
+        <li><a href="contact.html">Contact Details</a></li>
+    </nav>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/joel-scaria-justine-202191203" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Joelscariajustine123" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-buttons">
+      <button onclick="showContent('bachelor')">Bachelor</button>
+      <button onclick="showContent('plustwo')">Plus Two</button>
+      <button onclick="showContent('sslc')">SSLC</button>
+    </div>
+
+    <div class="hero-content" id="hero-content">
+      <h2>Education</h2>
+      <p>Click on the buttons above to see details about my educational background.</p>
+      <img src="education.png" alt="Joel Scaria Justine">
+    </div>
+  </section>
+
+  <footer></footer>
+
+  <script>
+    function showContent(section) {
+      const contentDiv = document.getElementById('hero-content');
+
+      if (section === 'bachelor') {
+        contentDiv.innerHTML = `
+          <h2>Bachelor of Technology in Computer Science Engineering</h2>
+          <p>I graduated with a Bachelor of Technology in Computer Science Engineering from Vimal Jyothi Engineering College, Chemperi, under A P J Abdul Kalam Technological University, Kerala. During my studies, I gained a solid foundation in computer science principles, programming, algorithms, and software engineering. The curriculum emphasized both theoretical and practical knowledge, preparing me for real-world challenges in software development and cybersecurity. I also participated in numerous projects and seminars that focused on the latest advancements in the tech industry.</p>
+          <img src="bachelor.jpg" alt="Vimal Jyothi Engineering College" class="education-image">
+        `;
+      } else if (section === 'plustwo') {
+        contentDiv.innerHTML = `
+          <h2>Plus Two in Biology Science</h2>
+          <p>I completed my Plus Two education in Biology Science at Nirmala Higher Secondary School, Chemperi, with a percentage of 76.9%. My subjects included Physics, Mathematics, Chemistry, and Biology. This broad spectrum of subjects allowed me to develop a strong understanding of both natural sciences and analytical skills, especially in mathematics and physics, which laid the groundwork for my engineering studies. The rigorous academic environment helped shape my problem-solving abilities and prepared me for my technical career.</p>
+          <img src="plustwo.jpg" alt="Nirmala Higher Secondary School" class="education-image">
+        `;
+      } else if (section === 'sslc') {
+        contentDiv.innerHTML = `
+          <h2>SSLC</h2>
+          <p>I achieved excellent results in my SSLC, securing 9 A+ grades and 1 A grade across a total of 10 subjects, with an overall performance close to 90%. This achievement demonstrated my dedication and hard work during my high school years. The SSLC education provided me with a strong base in all core subjects, including mathematics, science, and social studies, which played a crucial role in shaping my academic path.</p>
+          <img src="sslc.jpg" alt="SSLC Achievement" class="education-image">
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joel Scaria Justine - Portfolio</title>
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 10px;
+      transition: color 0.3s ease;
+    }
+
+    /* Hover: Change color to yellow */
+    nav a:hover {
+      color: yellow;
+    }
+
+    .social-links a {
+      margin-left: 20px;
+      color: #ffffff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+
+    .hero-buttons {
+      margin-bottom: 20px;
+    }
+
+    .hero-buttons button {
+      background-color: #2ecc71;
+      color: #ffffff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      margin: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-buttons button:hover {
+      background-color: #27ae60;
+    }
+
+    .hero-content {
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .hero-content h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .internship-image {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact Details</a></li>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/joel-scaria-justine-202191203" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Joelscariajustine123" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-buttons">
+      <button onclick="showContent('python')">Python Full Stack Developer</button>
+      <button onclick="showContent('flutter')">Flutter</button>
+      <button onclick="showContent('cybersecurity')">Cybersecurity</button>
+    </div>
+
+    <div class="hero-content" id="hero-content">
+      <h2>Internship</h2>
+      <p>Click on the buttons above to see details about my internships.</p>
+      <img src="internship.png" alt="Joel Scaria Justine">
+    </div>
+  </section>
+
+  <footer></footer>
+
+  <script>
+    function showContent(section) {
+      const contentDiv = document.getElementById('hero-content');
+
+      if (section === 'python') {
+        contentDiv.innerHTML = `
+          <h2>Python Full Stack Developer</h2>
+          <p><strong>Duration:</strong> July 2024 - Present</p>
+          <p>I am currently working as a Python Full Stack Developer, where I am gaining hands-on experience in building scalable web applications using Python, Django, HTML, CSS, and JavaScript. My role involves both frontend and backend development, and I am honing my skills in web design, API integration, database management, and server-side logic. The focus has been on creating dynamic web solutions with seamless user experiences.</p>
+          <img src="python-fullstack.png" alt="Python Full Stack Development" class="internship-image">
+        `;
+      } else if (section === 'flutter') {
+        contentDiv.innerHTML = `
+          <h2>Flutter Developer Internship</h2>
+          <p><strong>Duration:</strong> December 2022 (1 week)</p>
+          <p>In December 2022, I completed a 1-week internship in Flutter development. During this time, I learned the basics of creating cross-platform mobile applications using the Flutter framework. I focused on building user interfaces, understanding Flutter widgets, and integrating basic functionalities such as navigation, form handling, and state management.</p>
+          <img src="flutter-internship.png" alt="Flutter Internship" class="internship-image">
+        `;
+      } else if (section === 'cybersecurity') {
+        contentDiv.innerHTML = `
+          <h2>Cybersecurity and Ethical Hacking Course</h2>
+          <p><strong>Duration:</strong> July 2024 - September 2024</p>
+          <p>During this intensive 3-month course, I gained hands-on experience in cybersecurity and ethical hacking, focusing on vulnerability assessment, network security, and penetration testing. This program helped me develop a strong understanding of the latest security methodologies, tools, and techniques to secure IT infrastructure and identify potential security threats.</p>
+          <h3>Key Learning Outcomes:</h3>
+          <ul>
+            <li><strong>Network Scanning & Mapping with Nmap:</strong> Conducted comprehensive network scans, used Nmap's advanced features like OS detection and network discovery, and implemented techniques to evade firewalls and IDS.</li>
+            <li><strong>Traffic Analysis with Wireshark:</strong> Analyzed real-time network traffic, pinpointed abnormal behavior using Wireshark filters, and performed network forensics.</li>
+            <li><strong>Vulnerability Scanning with Nessus:</strong> Identified and assessed security weaknesses, generated vulnerability reports, and tested systems for compliance with security standards.</li>
+          </ul>
+          <h3>Projects & Practical Applications:</h3>
+          <ul>
+            <li>Conducted a complete penetration test of a virtual network environment, including reconnaissance, vulnerability analysis, and reporting.</li>
+            <li>Performed vulnerability assessments on simulated business networks using Nessus.</li>
+            <li>Monitored live network traffic to identify potential data breaches and suspicious communications using Wireshark.</li>
+          </ul>
+          <h3>Skills Acquired:</h3>
+          <ul>
+            <li>Network Security and Penetration Testing</li>
+            <li>Vulnerability Assessment and Management</li>
+            <li>Packet Sniffing and Traffic Analysis</li>
+            <li>Incident Detection and Response</li>
+            <li>Familiarity with TCP/IP, OSI model, and common protocols (HTTP, DNS, FTP)</li>
+            <li>Reporting and Documentation of Security Findings</li>
+          </ul>
+          <img src="cybersecurity-course.png" alt="Cybersecurity Course" class="internship-image">
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Projects</title>
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 10px;
+      transition: color 0.3s ease;
+    }
+
+    /* Hover: Change color to yellow */
+    nav a:hover {
+      color: yellow;
+    }
+
+    /* On click: change color to red */
+    nav a.clicked {
+      color: red;
+    }
+
+    .social-links a {
+      margin-left: 20px;
+      color: #ffffff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 50px;
+    }
+
+    .hero-text {
+      flex: 1;
+      margin-right: 50px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .project-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #2ecc71;
+      color: #ffffff;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      width: 100%;
+      max-width: 400px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+    }
+
+    button img {
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+      border-radius: 10px;
+    }
+
+    .project-details {
+      display: none;
+      background-color: #1f1f1f;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .project-details p {
+      margin-bottom: 10px;
+    }
+
+    /* Styling the video */
+    .project-details video {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+    .project-image {
+      max-width: 90%;
+      height: auto;
+      display: block;
+      margin: 0 auto; /* Centers the image */
+  }
+  
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="internship.html">Internship/Certificate</a></li>
+        <li><a href="contact.html">Contact Details</a></li>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/joel-scaria-justine-202191203" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Joelscariajustine123" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Projects</h1>
+
+    <div class="project-buttons">
+      <!-- Nmap Project -->
+      <button onclick="toggleDetails('nmap')">
+        <img src="nmap.png" alt="Nmap">
+        Nmap
+      </button>
+      <div id="nmap" class="project-details">
+        <p><strong>May 2024 - Present</strong></p>
+        <p><strong>Scope:</strong> To scan a host system and gather detailed information about its open ports, services, and operating system.</p>
+        <p><strong>Tool:</strong> Nmap (Network Mapper)</p>
+        <p><strong>Outcome:</strong> Conducted an intense scan using the command <code>nmap -T4 -A -v (host IP)</code>. The scan results revealed three open ports:</p>
+        <ul>
+          <li>Port 135: Microsoft Windows RPC</li>
+          <li>Port 139: Microsoft Windows NetBIOS</li>
+          <li>Port 445: Microsoft SMB</li>
+        </ul>
+        <p>The system was identified as running Microsoft Windows 10/11. After identifying the open ports, I researched potential vulnerabilities and found a critical one (CVE-2020-0796) on Port 135, which was mitigated by closing it using Windows Defender Firewall.</p>
+        <img src="nmap.png" alt="Nmap Project" class="project-image">
+        <video controls>
+          <source src="nmap.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Nessus Project -->
+      <button onclick="toggleDetails('nessus')">
+        <img src="nessus.png" alt="Nessus">
+        Nessus
+      </button>
+      <div id="nessus" class="project-details">
+        <p><strong>May 2024 - Present</strong></p>
+        <p><strong>Scope:</strong> To identify vulnerabilities present in a host system through thorough scanning.</p>
+        <p><strong>Tool:</strong> Nessus Essentials</p>
+        <p><strong>Outcome:</strong> Conducted an Advanced Scan on a Windows 11 system. The scan revealed 23 vulnerabilities, including a Medium Severity issue (CVSS 5.3) on Port 445, related to SMB Signing Not Required. The vulnerability was mitigated by enabling digital signing in the Local Group Policy Editor, enhancing security.</p>
+        <img src="nessus.png" alt="Nessus Project" class="project-image">
+        <video controls>
+          <source src="nessus.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Veterinary Health Management System -->
+      <button onclick="toggleDetails('vet')">
+        <img src="vet.jpg" alt="Veterinary Health Management System">
+        Veterinary Health Management System
+      </button>
+      <div id="vet" class="project-details">
+        <p><strong>August 2022 - May 2023</strong></p>
+        <p><strong>Scope:</strong> Automating processes in a veterinary healthcare system, such as user registration, medical history management, and appointment scheduling.</p>
+        <p><strong>Tool:</strong> HTML, CSS, Django, Python</p>
+        <p><strong>Outcome:</strong> Built a web app allowing pet owners, veterinarians, and staff to manage accounts securely, with features for medical history, appointments, and billing, improving clinic operations.</p>
+        <img src="vet.jpg" alt="Veterinary Health Management System" class="education-image">
+      </div>
+
+      <!-- Real Time Adaptive Game Difficulty -->
+      <button onclick="toggleDetails('game')">
+        <img src="game.png" alt="Real Time Adaptive Game Difficulty">
+        Real Time Adaptive Game Difficulty
+      </button>
+      <div id="game" class="project-details">
+        <p><strong>June 2023 - May 2024</strong></p>
+        <p><strong>Scope:</strong> Creating a system that dynamically adjusts game difficulty based on player performance for enhanced engagement.</p>
+        <p><strong>Tool:</strong> C#, Unity Engine</p>
+        <p><strong>Outcome:</strong> Developed a system using Unity 3D and machine learning to adjust game challenges according to real-time player data, enhancing satisfaction and engagement through tailored experiences.</p>
+        <img src="game.png" alt="Real Time Adaptive Game Difficulty" class="project-image">
+      </div>
+    </div>
+  </section>
+
+  <footer></footer>
+
+  <script>
+    // Toggle project details visibility
+    function toggleDetails(id) {
+      var project = document.getElementById(id);
+      project.style.display = project.style.display === 'none' || project.style.display === '' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
